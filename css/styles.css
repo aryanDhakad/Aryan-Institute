@@ -6,8 +6,15 @@
 .slider {
   position: relative;
   padding: 0 10vw;
+
 }
 
+.slick-arrow {
+  transform: scale(1.5);
+  background-color: #000000;
+  border-radius: 50%;
+  margin: 0 -5vw;
+}
 
 
 .slider img {
@@ -18,20 +25,7 @@
   max-height: 300px;
 }
 
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  border: 2px solid black;
-  font-weight: bold;
-}
 
-.prev-arrow {
-  left: -10%;
-}
-
-.next-arrow {
-  right: -10%;
-}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -77,11 +71,16 @@ img {
   height: 0;
 }
 
+.mainContent {
+  line-height: 3rem;
+}
+
 .header {
-  padding: 4rem 0;
+
+  padding: 3rem 0;
   height: 10vh;
   margin-bottom: 4vh;
-  /* background-color: red; */
+
 }
 
 
@@ -100,9 +99,8 @@ img {
 
 .header img {
   margin-left: 5vw;
-  max-height: 10vh;
+  max-height: 15vh;
   object-fit: fill;
-  border-radius: 50%;
 }
 
 
@@ -214,19 +212,31 @@ section {
   margin: 5vh 0;
 }
 
-@media only screen and (max-width: 1000px) {
-  .slick-arrow {
-    visibility: hidden;
+
+
+@media only screen and (max-width: 973px) {
+
+  .header {
+    padding: 0;
+    height: 15vh;
   }
 
   #navbarNav {
     background-color: rgb(77, 76, 76);
   }
-}
 
-@media only screen and (max-width: 768px) {
+  .navbar-toggler {
+    font-size: 3rem;
+    margin-right: 10vw;
+  }
+
+
+  .slick-arrow {
+    visibility: hidden;
+  }
+
   .card-cs {
-    width: 90vw;
+    width: 70vw;
   }
 
   .card-cs .content a {
