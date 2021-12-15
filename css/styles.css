@@ -9,11 +9,15 @@
 
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: blue;
+
+}
+
 .slick-arrow {
   transform: scale(1.5);
-  background-color: #000000;
-  border-radius: 50%;
-  margin: 0 -5vw;
+  margin: 0 -2vw;
 }
 
 
@@ -50,9 +54,8 @@ body {
 
 hr {
   height: 1px;
-  background-color: white;
+  background-color: transparent;
   border-bottom: 10px dotted black;
-
   width: 20%;
   margin: 5vh auto;
 }
@@ -72,7 +75,7 @@ img {
 }
 
 .mainContent {
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .header {
@@ -82,8 +85,6 @@ img {
   margin-bottom: 4vh;
 
 }
-
-
 
 .header .nav-item {
   border-radius: 20%;
@@ -105,20 +106,6 @@ img {
 
 
 
-.card-cs {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 50vh;
-  width: 30vw;
-  border-radius: 25px;
-  background-color: #ffffff;
-  box-shadow: 10px 0 10% rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  border-bottom: 3px solid black;
-}
 
 .courses {
   display: flex;
@@ -128,17 +115,27 @@ img {
 }
 
 .card-cs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0.5rem;
-  max-height: 50vh;
+  height: 50vh;
+  width: 30vw;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 10px 0 10% rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-bottom: 3px solid black;
 }
 
-.card-cs h2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 20px 0 0 20px;
+.card-cs h2,
+.modal-title {
+  position: relative;
   font-size: 44px;
   font-weight: 600;
+  margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 15px;
   color: #ffffff;
@@ -146,10 +143,9 @@ img {
 }
 
 .card-cs p {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 0 20px 60px 20px;
+  position: relative;
+  margin: 4vh 0;
+  float: left;
   font-size: 18px;
   color: #ffffff;
   mix-blend-mode: difference;
@@ -158,17 +154,16 @@ img {
 .card-cs #circle {
   height: 100%;
   width: 100%;
+  position: absolute;
   border-radius: 50%;
   background-color: #000000;
-  margin-top: -330px;
-  margin-left: 200px;
+  top: -60%;
+  right: -40%;
 }
 
 .card-cs .content a {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 0 20px 20px 0;
+  position: relative;
+
   cursor: pointer;
   background-color: #000000;
   color: #ffffff;
@@ -224,6 +219,7 @@ section {
   #navbarNav {
     background-color: rgb(77, 76, 76);
   }
+
 
   .navbar-toggler {
     font-size: 3rem;
